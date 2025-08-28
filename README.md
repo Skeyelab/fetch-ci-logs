@@ -282,7 +282,6 @@ npm run release:major   # 1.0.0 → 2.0.0
 
 ## 🙏 Acknowledgments
 
-- Inspired by the Ruby Rake task from [coinbase_futures_bot](https://github.com/Skeyelab/coinbase_futures_bot)
 - Built for developers who need fast access to GitHub Actions workflow logs
 - Thanks to the GitHub Actions team for the excellent API
 
