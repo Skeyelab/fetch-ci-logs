@@ -1,6 +1,6 @@
 {
   "name": "fetch-github-logs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Download GitHub Actions workflow logs",
   "main": "lib/index.js",
   "bin": {
