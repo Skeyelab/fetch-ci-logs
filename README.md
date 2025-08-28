@@ -287,7 +287,6 @@ npm run release:major   # 1.0.0 → 2.0.0
 
 ## 📞 Support
 
-- 📧 **Email**: eric@skeyelab.com
 - 🐛 **Issues**: [GitHub Issues](https://github.com/Skeyelab/fetch-github-logs/issues)
 - 📖 **Documentation**: [GitHub Wiki](https://github.com/Skeyelab/fetch-github-logs/wiki)
 

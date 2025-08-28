@@ -34,7 +34,7 @@
     "devops",
     "ci-cd"
   ],
-  "author": "Eric Dahl <eric@skeyelab.com>",
+  "author": "Eric Dahl",
   "license": "MIT",
   "repository": {
     "type": "git",
