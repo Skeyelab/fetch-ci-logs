@@ -1,6 +1,6 @@
 {
   "name": "fetch-ci-logs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Download GitHub Actions logs for CI workflows",
   "main": "lib/index.js",
   "bin": {
