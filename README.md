@@ -183,8 +183,8 @@ You need a GitHub personal access token with the following permissions:
 
 ### Setup
 ```bash
-git clone https://github.com/Skeyelab/fetch-ci-logs.git
-cd fetch-ci-logs
+git clone https://github.com/Skeyelab/fetch-github-logs.git
+cd fetch-github-logs
 npm install
 ```
 

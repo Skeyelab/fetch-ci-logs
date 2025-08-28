@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-08-28
 
 ### Added
-- **Initial release** of fetch-ci-logs - a CLI tool to download GitHub Actions logs
+- **Initial release** of fetch-github-logs - a CLI tool to download GitHub Actions logs
 - **Core functionality**:
   - `fetch-logs` command to download CI logs for specific workflows
   - `after-push` command to push code and automatically fetch logs
@@ -58,6 +58,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-**Repository**: [https://github.com/Skeyelab/fetch-ci-logs](https://github.com/Skeyelab/fetch-ci-logs)  
-**NPM Package**: [https://www.npmjs.com/package/fetch-ci-logs](https://www.npmjs.com/package/fetch-ci-logs)  
-**Issues**: [https://github.com/Skeyelab/fetch-ci-logs/issues](https://github.com/Skeyelab/fetch-ci-logs/issues)
+**Repository**: [https://github.com/Skeyelab/fetch-github-logs](https://github.com/Skeyelab/fetch-github-logs)
+**NPM Package**: [https://www.npmjs.com/package/fetch-github-logs](https://www.npmjs.com/package/fetch-github-logs)
+**Issues**: [https://github.com/Skeyelab/fetch-github-logs/issues](https://github.com/Skeyelab/fetch-github-logs/issues)
