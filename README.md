@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/fetch-ci-logs.svg)](https://badge.fury.io/js/fetch-ci-logs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A powerful CLI tool to download GitHub Actions logs for CI workflows. Perfect for AI assistants debugging CI failures and developers who need quick access to CI logs.
+A powerful CLI tool to download GitHub Actions logs for CI workflows. Perfect for developers who need quick access to CI logs.
 
 ## 🚀 Quick Start
 
@@ -24,11 +24,7 @@ fetch-ci-logs fetch-logs
 fetch-ci-logs after-push
 ```
 
-### AI-Powered Debugging
-```bash
-# Complete AI debugging workflow
-fetch-ci-logs auto-debug
-```
+
 
 ## 📦 Installation
 
@@ -52,12 +48,7 @@ npm link  # for global usage
 
 ## 🎯 Use Cases
 
-### 🤖 AI Code Assistants
-Perfect for AI assistants that need to:
-- Debug CI failures after pushing code changes
-- Analyze test failures and build errors
-- Provide context-aware fixes based on real CI output
-- Understand platform-specific issues
+
 
 ### 👥 Developers
 - Quick access to CI logs without opening browser
@@ -128,22 +119,7 @@ fetch-ci-logs after-push --remote upstream --branch feature-branch
 fetch-ci-logs after-push --skip-push
 ```
 
-#### `auto-debug` - AI-Powered Debugging
-```bash
-fetch-ci-logs auto-debug [options]
-```
 
-Complete workflow for AI-assisted debugging:
-1. Push code changes
-2. Wait for CI to run
-3. Download and analyze logs
-4. Provide debugging insights
-
-**Options:**
-- `-r, --remote <remote>` - Git remote
-- `-b, --branch <branch>` - Branch to push
-- `-w, --workflow <workflow>` - Workflow file name
-- `--analyze-errors` - Analyze and summarize CI errors
 
 ### Environment Variables
 
@@ -246,10 +222,67 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🚀 Automated Releases
+
+This project uses GitHub Actions for automated npm publishing. There are two ways to trigger releases:
+
+### Option 1: Manual Release (Recommended)
+
+1. **Push your changes** to the main branch
+2. **Go to GitHub Actions** → **Release & Publish to npm**
+3. **Click "Run workflow"** and select version type (patch/minor/major)
+4. **Workflow will:**
+   - Bump version automatically
+   - Run tests and linting
+   - Publish to npm
+   - Create Git tag
+   - Create GitHub release
+
+### Option 2: Release via Git Tag
+
+1. **Update version manually:**
+   ```bash
+   npm run release:patch   # or release:minor / release:major
+   ```
+
+2. **Commit and push changes:**
+   ```bash
+   git add package.json package-lock.json
+   git commit -m "chore: bump version to x.x.x"
+   git push origin main
+   ```
+
+3. **Create a GitHub release:**
+   - Go to GitHub → Releases → Create new release
+   - Tag: `vx.x.x` (must match package.json version)
+   - Publish release
+
+4. **GitHub Actions will automatically publish to npm**
+
+### Setup Required
+
+1. **Create npm token:**
+   ```bash
+   npm login
+   # Get token from: https://www.npmjs.com/settings/tokens
+   ```
+
+2. **Add to GitHub Secrets:**
+   - Go to repository Settings → Secrets and variables → Actions
+   - Add: `NPM_TOKEN` = your npm token
+
+### Release Scripts
+
+```bash
+npm run release:patch   # 1.0.0 → 1.0.1
+npm run release:minor   # 1.0.0 → 1.1.0
+npm run release:major   # 1.0.0 → 2.0.0
+```
+
 ## 🙏 Acknowledgments
 
 - Inspired by the Ruby Rake task from [coinbase_futures_bot](https://github.com/Skeyelab/coinbase_futures_bot)
-- Built for AI assistants and developers who need fast CI log access
+- Built for developers who need fast CI log access
 - Thanks to the GitHub Actions team for the excellent API
 
 ## 📞 Support
@@ -260,4 +293,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ for AI assistants and developers**
+**Made with ❤️ for developers**

@@ -1,10 +1,10 @@
 {
   "name": "fetch-ci-logs",
   "version": "1.0.0",
-  "description": "Download GitHub Actions logs for CI workflows - perfect for AI assistants debugging CI failures",
+  "description": "Download GitHub Actions logs for CI workflows",
   "main": "lib/index.js",
   "bin": {
-    "fetch-ci-logs": "./bin/fetch-ci-logs.js"
+    "fetch-ci-logs": "bin/fetch-ci-logs.js"
   },
   "files": [
     "lib",
@@ -18,7 +18,11 @@
     "test:watch": "jest --watch",
     "lint": "eslint lib/**/*.js bin/**/*.js",
     "lint:fix": "eslint lib/**/*.js bin/**/*.js --fix",
-    "prepare": "npm run lint && npm test"
+    "prepare": "npm run lint && npm test",
+    "release:patch": "npm version patch && npm run prepare",
+    "release:minor": "npm version minor && npm run prepare",
+    "release:major": "npm version major && npm run prepare",
+    "prepublishOnly": "npm run prepare"
   },
   "keywords": [
     "github",
@@ -27,7 +31,6 @@
     "logs",
     "automation",
     "debugging",
-    "ai",
     "continuous-integration"
   ],
   "author": "Eric Dahl <eric@skeyelab.com>",

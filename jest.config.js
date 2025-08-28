@@ -1,24 +1,24 @@
-{
-  "testEnvironment": "node",
-  "testMatch": [
-    "**/__tests__/**/*.js",
-    "**/?(*.)+(spec|test).js"
+module.exports = {
+  testEnvironment: 'node',
+  testMatch: [
+    '**/__tests__/**/*.js',
+    '**/?(*.)+(spec|test).js'
   ],
-  "collectCoverageFrom": [
-    "lib/**/*.js",
-    "!lib/**/*.test.js",
-    "!lib/**/*.spec.js"
+  collectCoverageFrom: [
+    'lib/**/*.js',
+    '!lib/**/*.test.js',
+    '!lib/**/*.spec.js'
   ],
-  "coverageDirectory": "coverage",
-  "coverageReporters": [
-    "text",
-    "lcov",
-    "html"
+  coverageDirectory: 'coverage',
+  coverageReporters: [
+    'text',
+    'lcov',
+    'html'
   ],
-  "moduleFileExtensions": [
-    "js",
-    "json"
+  moduleFileExtensions: [
+    'js',
+    'json'
   ],
-  "setupFilesAfterEnv": [],
-  "testTimeout": 10000
-}
+  setupFilesAfterEnv: [],
+  testTimeout: 10000
+};
