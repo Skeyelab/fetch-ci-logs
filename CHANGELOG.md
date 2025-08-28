@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2025-01-08
+
+### Changed
+- **Folder Structure**: Changed download folder from `log/ci/` to `log/github/` for consistency
+- **Repository Name**: Updated repository name from `fetch-ci-logs` to `fetch-github-logs`
+- **User-Agent**: Updated User-Agent string to `fetch-github-logs/1.0.2`
+- **Documentation**: Updated all references and links to reflect new naming
+
+## [1.0.1] - 2025-01-08
+
+### Fixed
+- Initial patch release with minor fixes
+
 ## [1.0.0] - 2025-08-28
 
 ### Added
