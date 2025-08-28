@@ -1,0 +1,56 @@
+{
+  "name": "fetch-ci-logs",
+  "version": "1.0.0",
+  "description": "Download GitHub Actions logs for CI workflows - perfect for AI assistants debugging CI failures",
+  "main": "lib/index.js",
+  "bin": {
+    "fetch-ci-logs": "./bin/fetch-ci-logs.js"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node bin/fetch-ci-logs.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint lib/**/*.js bin/**/*.js",
+    "lint:fix": "eslint lib/**/*.js bin/**/*.js --fix",
+    "prepare": "npm run lint && npm test"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "ci",
+    "logs",
+    "automation",
+    "debugging",
+    "ai",
+    "continuous-integration"
+  ],
+  "author": "Eric Dahl <eric@skeyelab.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skeyelab/fetch-ci-logs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Skeyelab/fetch-ci-logs/issues"
+  },
+  "homepage": "https://github.com/Skeyelab/fetch-ci-logs#readme",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "nock": "^13.4.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "preferGlobal": true
+}
