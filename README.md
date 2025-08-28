@@ -1,15 +1,15 @@
-# Fetch CI Logs
+# Fetch GitHub Logs
 
-[![npm version](https://badge.fury.io/js/fetch-ci-logs.svg)](https://badge.fury.io/js/fetch-ci-logs)
+[![npm version](https://badge.fury.io/js/fetch-github-logs.svg)](https://badge.fury.io/js/fetch-github-logs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A powerful CLI tool to download GitHub Actions logs for CI workflows. Perfect for developers who need quick access to CI logs.
+A powerful CLI tool to download GitHub Actions workflow logs. Perfect for developers who need quick access to workflow logs for debugging and analysis.
 
 ## 🚀 Quick Start
 
 ### Install Globally
 ```bash
-npm install -g fetch-ci-logs
+npm install -g fetch-github-logs
 ```
 
 ### Basic Usage
@@ -17,11 +17,11 @@ npm install -g fetch-ci-logs
 # Set your GitHub token
 export GITHUB_TOKEN=your_github_token_here
 
-# Download latest CI logs
-fetch-ci-logs fetch-logs
+# Download latest workflow logs
+fetch-github-logs fetch-logs
 
-# Push and wait for CI, then download logs
-fetch-ci-logs after-push
+# Push and wait for workflow, then download logs
+fetch-github-logs after-push
 ```
 
 
@@ -30,18 +30,18 @@ fetch-ci-logs after-push
 
 ### Global Installation (Recommended)
 ```bash
-npm install -g fetch-ci-logs
+npm install -g fetch-github-logs
 ```
 
 ### Local Installation
 ```bash
-npm install --save-dev fetch-ci-logs
+npm install --save-dev fetch-github-logs
 ```
 
 ### Manual Installation
 ```bash
-git clone https://github.com/Skeyelab/fetch-ci-logs.git
-cd fetch-ci-logs
+git clone https://github.com/Skeyelab/fetch-github-logs.git
+cd fetch-github-logs
 npm install
 npm link  # for global usage
 ```
@@ -51,27 +51,28 @@ npm link  # for global usage
 
 
 ### 👥 Developers
-- Quick access to CI logs without opening browser
+- Quick access to GitHub Actions workflow logs without opening browser
 - Automated log collection for debugging
-- CI/CD pipeline debugging
-- Team collaboration on CI issues
+- GitHub Actions workflow debugging
+- Team collaboration on workflow issues
 
 ### 🔧 DevOps & CI/CD
 - Automated log collection in scripts
 - Integration with monitoring systems
-- Debugging deployment pipelines
+- Debugging deployment and automation pipelines
+- Workflow performance analysis
 
 ## 📖 Usage
 
 ### Commands
 
-#### `fetch-logs` - Download CI Logs
+#### `fetch-logs` - Download Workflow Logs
 ```bash
-fetch-ci-logs fetch-logs [options]
+fetch-github-logs fetch-logs [options]
 ```
 
 **Options:**
-- `-w, --workflow <workflow>` - Workflow file name (default: ci.yml)
+- `-w, --workflow <workflow>` - Workflow file name (default: build.yml)
 - `-r, --repo <repo>` - Repository in owner/repo format (auto-detected)
 - `-i, --run-id <runId>` - Specific run ID to download
 - `--wait` - Wait for workflow run to appear
@@ -81,42 +82,42 @@ fetch-ci-logs fetch-logs [options]
 
 **Examples:**
 ```bash
-# Download latest CI logs
-fetch-ci-logs fetch-logs
+# Download latest workflow logs
+fetch-github-logs fetch-logs
 
 # Download logs for specific workflow
-fetch-ci-logs fetch-logs --workflow deploy.yml
+fetch-github-logs fetch-logs --workflow deploy.yml
 
-# Wait for CI to complete then download
-fetch-ci-logs fetch-logs --wait-for-completion
+# Wait for workflow to complete then download
+fetch-github-logs fetch-logs --wait-for-completion
 
 # Download specific run
-fetch-ci-logs fetch-logs --run-id 123456789
+fetch-github-logs fetch-logs --run-id 123456789
 ```
 
-#### `after-push` - Push & Fetch CI Logs
+#### `after-push` - Push & Fetch Workflow Logs
 ```bash
-fetch-ci-logs after-push [options]
+fetch-github-logs after-push [options]
 ```
 
 **Options:**
 - `-r, --remote <remote>` - Git remote (default: origin)
 - `-b, --branch <branch>` - Branch to push (auto-detected)
 - `--skip-push` - Skip git push
-- `-w, --workflow <workflow>` - Workflow file name
+- `-w, --workflow <workflow>` - Workflow file name (default: build.yml)
 - `--wait-for-completion` - Wait for run to complete
 - `--timeout <seconds>` - Wait timeout
 
 **Examples:**
 ```bash
-# Push current branch and wait for CI
-fetch-ci-logs after-push
+# Push current branch and wait for workflow
+fetch-github-logs after-push
 
 # Push specific branch to specific remote
-fetch-ci-logs after-push --remote upstream --branch feature-branch
+fetch-github-logs after-push --remote upstream --branch feature-branch
 
-# Just wait for CI without pushing
-fetch-ci-logs after-push --skip-push
+# Just wait for workflow without pushing
+fetch-github-logs after-push --skip-push
 ```
 
 
@@ -127,7 +128,7 @@ fetch-ci-logs after-push --skip-push
 |----------|-------------|---------|
 | `GITHUB_TOKEN` | GitHub personal access token | **Required** |
 | `GITHUB_REPO` | Repository in "owner/repo" format | Auto-detected |
-| `CI_WORKFLOW` | Workflow file name | `ci.yml` |
+| `GITHUB_WORKFLOW` | Workflow file name | `build.yml` |
 | `RUN_ID` | Specific run ID to download | Latest run |
 | `WAIT_FOR_RUN` | Wait for workflow run to appear | `false` |
 | `WAIT_FOR_COMPLETION` | Wait for run to complete | `false` |
@@ -138,11 +139,11 @@ fetch-ci-logs after-push --skip-push
 ### Programmatic Usage
 
 ```javascript
-const { fetchLogs, afterPush } = require('fetch-ci-logs');
+const { fetchLogs, afterPush } = require('fetch-github-logs');
 
 // Download logs programmatically
 await fetchLogs({
-  workflow: 'ci.yml',
+  workflow: 'build.yml',
   repo: 'owner/repo',
   waitForCompletion: true
 });
@@ -282,14 +283,14 @@ npm run release:major   # 1.0.0 → 2.0.0
 ## 🙏 Acknowledgments
 
 - Inspired by the Ruby Rake task from [coinbase_futures_bot](https://github.com/Skeyelab/coinbase_futures_bot)
-- Built for developers who need fast CI log access
+- Built for developers who need fast access to GitHub Actions workflow logs
 - Thanks to the GitHub Actions team for the excellent API
 
 ## 📞 Support
 
 - 📧 **Email**: eric@skeyelab.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/Skeyelab/fetch-ci-logs/issues)
-- 📖 **Documentation**: [GitHub Wiki](https://github.com/Skeyelab/fetch-ci-logs/wiki)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Skeyelab/fetch-github-logs/issues)
+- 📖 **Documentation**: [GitHub Wiki](https://github.com/Skeyelab/fetch-github-logs/wiki)
 
 ---
 

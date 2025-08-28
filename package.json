@@ -1,10 +1,10 @@
 {
-  "name": "fetch-ci-logs",
+  "name": "fetch-github-logs",
   "version": "1.0.0",
-  "description": "Download GitHub Actions logs for CI workflows",
+  "description": "Download GitHub Actions workflow logs",
   "main": "lib/index.js",
   "bin": {
-    "fetch-ci-logs": "bin/fetch-ci-logs.js"
+    "fetch-github-logs": "bin/fetch-github-logs.js"
   },
   "files": [
     "lib",
@@ -13,7 +13,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "start": "node bin/fetch-ci-logs.js",
+    "start": "node bin/fetch-github-logs.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint lib/**/*.js bin/**/*.js",
@@ -27,22 +27,23 @@
   "keywords": [
     "github",
     "actions",
-    "ci",
+    "workflows",
     "logs",
     "automation",
     "debugging",
-    "continuous-integration"
+    "devops",
+    "ci-cd"
   ],
   "author": "Eric Dahl <eric@skeyelab.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Skeyelab/fetch-ci-logs.git"
+    "url": "git+https://github.com/Skeyelab/fetch-github-logs.git"
   },
   "bugs": {
-    "url": "https://github.com/Skeyelab/fetch-ci-logs/issues"
+    "url": "https://github.com/Skeyelab/fetch-github-logs/issues"
   },
-  "homepage": "https://github.com/Skeyelab/fetch-ci-logs#readme",
+  "homepage": "https://github.com/Skeyelab/fetch-github-logs#readme",
   "dependencies": {
     "axios": "^1.6.0",
     "commander": "^11.1.0"
