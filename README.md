@@ -160,7 +160,7 @@ await afterPush({
 
 Logs are saved in the following structure:
 ```
-log/ci/
+log/github/
 └── 123456789-abc1234/
     ├── run_123456789.zip          # Combined run logs
     ├── run_123456789_metadata.json # Run metadata
